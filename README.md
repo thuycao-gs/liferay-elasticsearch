@@ -1,6 +1,6 @@
 # liferay-elasticsearch
 
-- Depend on the liferay version and set up
+Depend on the liferay version and set up
 
 - Elasticsearch 6.x
 
