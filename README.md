@@ -1,8 +1,8 @@
-# liferay-elasticsearch
+# liferay-elasticsearch & Kibana
 
 Depend on the liferay version and set up
 
-- Elasticsearch 7.x
+# Elasticsearch 7.x
 
 **Step 1 — Installing and Configuring Elasticsearch**
 + curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -37,3 +37,17 @@ Depend on the liferay version and set up
   }
 }
 '
+# Kibana 7.x
+- sudo apt-get install kibana
+- ps -p 1
+- sudo update-rc.d kibana defaults 95 10
+- sudo -i service kibana start
+- sudo -i service kibana stop
+
+**Configure Kibana via the config file**
+/etc/kibana/kibana.ym
+https://www.elastic.co/guide/en/kibana/current/deb.html#deb-configuring
+
+
+
+
