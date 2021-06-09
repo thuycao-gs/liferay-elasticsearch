@@ -23,5 +23,17 @@ Depend on the liferay version and set up
 + sudo ufw enable
 + sudo ufw status
 
-- Step 4 — Testing Elasticsearch
+**Step 4 — Testing Elasticsearch**
 + curl -X GET 'http://localhost:9200'
++ curl -XGET 'http://localhost:9200/_nodes?pretty'
++ curl -X GET "localhost:9200/liferay-20099/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+      "entryClassName": {
+        "query": "com.liferay.journal.model.JournalArticle"
+      }
+    }
+  }
+}
+'
